@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
+
+// box sizing
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+// set up body 
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+
+// reset margins
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin-top: 0;
+}
+
+// images
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+}
+
+// list
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+// links
+
+a,
+a:visited,
+a:active {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+// buutons
+button {
+    cursor: pointer;
+    font: inherit
+}
+
+/* remove animations for people who turned it off*/
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
