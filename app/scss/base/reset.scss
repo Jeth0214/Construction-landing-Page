@@ -1,4 +1,6 @@
+@use 'abstract' as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
+
 
 // box sizing
 *,
@@ -9,7 +11,7 @@
 
 // set up body 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $ff-sans-serif;
     min-height: 100vh;
     font-size: 16px;
 }

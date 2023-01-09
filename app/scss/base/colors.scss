@@ -1,0 +1,18 @@
+@use 'abstract' as *;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark-gray": $dark-gray,
+    "dark": $dark,
+    "light": $light,
+    "black": $black,
+    "white": $white,
+);
+
+@each $key ,
+$value in $theme-colors {
+    .text-#{$key} {
+        color: $value
+    }
+}
