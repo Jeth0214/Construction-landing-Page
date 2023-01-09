@@ -1,0 +1,45 @@
+// Variables
+
+/** Colors  */
+$primary: #f6da38;
+$secondary: #454f46;
+$dark-gray: #5E5C47;
+$dark: #1E1B1C;
+$light: #EDEEE8;
+$black: #000000;
+$white: #FFFFFF;
+
+/** Font Family  */
+$ff-sans-serif: 'Poppins', sans-serif;
+
+/** Font Sizes  */
+$fs-h1: 4.64rem;
+$fs-h2: 2.5rem;
+$fs-h3: 1.85rem;
+$fs-h4: 1.4rem;
+$fs-h5: 1.2rem;
+$fs-base: 1rem;
+
+/** Font weight  */
+$fw-lighter: lighter;
+$fw-light: 300;
+$fw-bold: 700;
+$fw-bolder: 900;
+
+/** Line height  */
+$lh-base: 1.5;
+$lh-sm: 1.25;
+$lh-large: 2;
+
+/** bases  */
+
+//spacing
+$base-padding: .75em;
+$base-margin: .75em;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 10px;
+
+// box shadows
+$base-box-shadows: 1px 3px 5px rgba(0, 0, 0, 0.5);
