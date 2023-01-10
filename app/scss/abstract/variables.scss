@@ -20,12 +20,6 @@ $fs-h4: 1.4rem;
 $fs-h5: 1.2rem;
 $fs-base: 1rem;
 
-/** Font weight  */
-$fw-lighter: lighter;
-$fw-light: 300;
-$fw-bold: 700;
-$fw-bolder: 900;
-
 /** Line height  */
 $lh-base: 1.5;
 $lh-sm: 1.25;
@@ -42,4 +36,4 @@ $base-border-thickness: 1px;
 $base-border-radius: 10px;
 
 // box shadows
-$base-box-shadows: 1px 3px 5px rgba(0, 0, 0, 0.5);
+$base-box-shadows: 1px 3px 5px rgba(0, 0, 0, 0.1);
