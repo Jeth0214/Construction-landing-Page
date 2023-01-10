@@ -1,0 +1,67 @@
+@use "sass:math";
+@use 'abstract' as *;
+
+$grid-columns: 12;
+$justify-contents: flex-end, flex-start, center, space-between, space-evenly, space-around;
+$align-items: flex-end, flex-start, stretch, center, start, end, baseline;
+$grid-gaps: (
+    "o": 0rem,
+    "1" : 10px,
+    "2" : 20px,
+    "3" : 30px,
+);
+
+
+@mixin calcWidth($col, $grid-columns) {
+    flex-grow: 0;
+    width: math.div($col * 100%, $grid-columns)
+}
+
+// grid container
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+;
+
+// generate justify-content
+@each $value in $justify-contents {
+    .justify-#{$value} {
+        justify-content: $value;
+    }
+}
+
+// generate align-content
+@each $value in $justify-contents {
+    .align-#{$value} {
+        align-content: $value;
+    }
+}
+
+// generate justify-content
+@each $value in $align-items {
+    .align-#{$value} {
+        align-items: $value;
+    }
+}
+
+//generate grid gaps
+@each $key ,
+$value in $grid-gaps {
+    .gap-#{$key} {
+        gap: $value;
+    }
+}
+
+// generate responsive columns
+@each $key ,
+$value in $breakpoints {
+    @include breakpoints-up($key) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$i}-#{$key} {
+                @include calcWidth($i, $grid-columns)
+            }
+        }
+    }
+}

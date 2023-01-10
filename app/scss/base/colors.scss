@@ -15,4 +15,16 @@ $value in $theme-colors {
     .text-#{$key} {
         color: $value
     }
+
+    .bg-#{$key} {
+        background-color: $value ;
+    }
+
+    ;
+
+    .text-hover-#{$key} {
+        &:hover {
+            color: lighten($value, 30%);
+        }
+    }
 }
