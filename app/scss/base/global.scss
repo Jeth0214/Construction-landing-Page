@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "abstract" as *;
+
+
+.hide-for-mobile {
+    display: none;
+
+    @include breakpoints-up("md") {
+        display: block;
+    }
+}
+
+.hide-for-desktop {
+    display: block;
+
+    @include breakpoints-up("md") {
+        display: none;
+    }
+}

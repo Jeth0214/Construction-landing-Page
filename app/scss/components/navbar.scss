@@ -1,0 +1,7 @@
+@use 'abstract' as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
