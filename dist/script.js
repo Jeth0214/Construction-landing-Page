@@ -1,2 +1,2 @@
-"use strict";console.log("Connected");
+"use strict";var navToggle=document.getElementById("nav__toggle");navToggle.addEventListener("click",(function(){toggleMenu()}));var toggleMenu=function(){console.log("navToggle clicked"),navToggle.classList.toggle("nav__toggle--open")};
 //# sourceMappingURL=script.js.map

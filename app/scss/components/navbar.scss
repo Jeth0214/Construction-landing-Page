@@ -4,4 +4,62 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    .nav__toggle {
+        cursor: pointer;
+        height: 100%;
+        width: rem(24);
+        position: relative;
+
+        &:hover {
+            background-color: $primary;
+        }
+
+        .nav__burger-line {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: rem(2.4);
+            border-radius: rem(5);
+            background-color: $dark-gray;
+            transition: transform 0.5s, width 0.5s;
+        }
+
+        .nav__burger-line--1 {
+            transform: translate(-50%, -7px);
+        }
+
+        .nav__burger-line--2 {
+            width: 100%;
+        }
+
+        .nav__burger-line--3 {
+            transform: translate(-50%, 5px);
+        }
+
+    }
+
+    /* Open nav toggle */
+
+    .nav__toggle--open {
+        background-color: $white;
+
+        .nav__burger-line--1 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .nav__burger-line--2 {
+            width: 0;
+        }
+
+        .nav__burger-line--3 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+
+
 }
