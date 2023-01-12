@@ -115,6 +115,9 @@ $utilities: (
             "light": light,
             "bold": 700,
             "bolder": bolder,
+        )),
+    "cursor": (prefix:"cursor",
+        values: ("default":pointer,
         ))
 );
 
@@ -127,7 +130,7 @@ $map in $utilities {
 
     @each $key,
     $value in $values {
-        @if($value =="default") {
+        @if($key =="default") {
             .#{$prefix} {
                 #{$property}: $value;
             }
