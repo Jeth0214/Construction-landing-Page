@@ -6,4 +6,16 @@
     top: 0;
     z-index: 1;
     box-shadow: $base-box-shadows;
+
+    .overlay {
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: rem(55);
+        background-image: linear-gradient(to bottom, lighten($primary, 20%), transparent);
+        cursor: pointer;
+
+    }
 }

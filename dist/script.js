@@ -1,2 +1,2 @@
-"use strict";var navToggle=document.getElementById("nav__toggle");navToggle.addEventListener("click",(function(){toggleMenu()}));var toggleMenu=function(){console.log("navToggle clicked"),navToggle.classList.toggle("nav__toggle--open")};
+"use strict";var navToggle=document.getElementById("nav__toggle"),navbar=document.querySelector(".nav"),overlay=document.querySelector("#overlay");navToggle.addEventListener("click",(function(){toggleMenu()}));var toggleMenu=function(){console.log("navToggle clicked"),navbar.classList.toggle("nav--open-menu"),overlay.classList.toggle("overlay")};
 //# sourceMappingURL=script.js.map
