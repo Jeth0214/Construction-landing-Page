@@ -4,16 +4,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    .nav__brand {
+        .nav__brand-image {
+            max-height: rem(35);
+        }
+
+        .nav__brand-name {
+            font-weight: bold;
+            color: darken($primary, 10%);
+        }
+
+    }
 
 
     .nav__toggle {
         cursor: pointer;
-        height: 100%;
+        height: rem(24);
         width: rem(24);
         position: relative;
+        transition: background-color 1s ease-in-out;
 
         &:hover {
-            background-color: $primary;
+            .nav__burger-line {
+                background-color: $primary;
+            }
         }
 
         .nav__burger-line {
@@ -41,11 +57,11 @@
         }
 
     }
+}
 
-    /* Open nav toggle */
-
+// for mobile open menu 
+.nav--open-menu {
     .nav__toggle--open {
-        background-color: $white;
 
         .nav__burger-line--1 {
             transform: translate(-50%, -50%) rotate(-45deg);
@@ -60,6 +76,23 @@
         }
     }
 
+    .nav__links {
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        right: 50%;
+        transform: translate;
+        transform: translateX(50%);
+        top: rem(80);
+        background-color: $light;
+        padding: rem(20);
+        border-radius: 5px;
+        width: rem(200);
+        align-items: center;
+        z-index: 3;
 
-
+        .nav__link+.nav__link {
+            margin-top: rem(16);
+        }
+    }
 }
