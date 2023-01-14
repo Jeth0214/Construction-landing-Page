@@ -21,3 +21,12 @@
 .cursor {
     cursor: pointer;
 }
+
+// some global animations {
+.fade-in {
+    animation: fade-in 300ms ease-in forwards;
+}
+
+.fade-out {
+    animation: fade-out 300ms ease-out forwards;
+}
