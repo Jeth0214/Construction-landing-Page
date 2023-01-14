@@ -8,16 +8,24 @@
 
     .nav__brand {
         .nav__brand-image {
-            max-height: rem(35);
+            height: rem(30);
+
+            @include breakpoints-up("md") {
+                height: rem(35);
+            }
         }
 
         .nav__brand-name {
             font-weight: bold;
+            font-size: rem(16);
             color: darken($primary, 10%);
+
+            @include breakpoints-up("md") {
+                font-size: rem(20);
+            }
         }
 
     }
-
 
     .nav__toggle {
         cursor: pointer;
@@ -57,11 +65,61 @@
         }
 
     }
+
+    .nav__links {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+
+        @include breakpoints-up("md") {
+            visibility: visible;
+            height: auto;
+            position: relative;
+        }
+
+        .nav__link {
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $primary;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+
+                @include breakpoints-up("md") {
+                    margin-right: rem(16);
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $primary;
+                top: rem(25);
+                opacity: 0;
+                transition: all .2s ease-in-out;
+
+                @include breakpoints-up("md") {
+                    top: rem(36);
+                }
+            }
+        }
+    }
+
+
 }
 
 // for mobile open menu 
 .nav--open-menu {
-    .nav__toggle--open {
+    .nav__toggle {
 
         .nav__burger-line--1 {
             transform: translate(-50%, -50%) rotate(-45deg);
@@ -77,22 +135,20 @@
     }
 
     .nav__links {
+        visibility: visible;
+        height: auto;
         display: flex;
         flex-flow: column;
         position: absolute;
         right: 50%;
-        transform: translate;
         transform: translateX(50%);
         top: rem(80);
         background-color: $light;
         padding: rem(20);
         border-radius: 5px;
-        width: rem(200);
+        width: rem(250);
         align-items: center;
         z-index: 3;
-
-        .nav__link+.nav__link {
-            margin-top: rem(16);
-        }
+        animation: opac .5s linear;
     }
 }
