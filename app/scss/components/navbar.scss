@@ -119,6 +119,7 @@
 
         .nav__link--active {
             color: $primary;
+            font-weight: bold;
 
             &::before {
                 opacity: 1;
