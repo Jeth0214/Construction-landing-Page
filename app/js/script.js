@@ -26,25 +26,16 @@ navToggle.addEventListener("click", () => {
 // hide and show toggle menu using the links
 navLink.forEach(link => {
     link.addEventListener("click", () => {
-        const index = [...navLink].indexOf(link);
-
-        if (link.parentElement.children[index] == index) {
-            navLink[index].classList.add("nav__link--active");
-            console.log(navLink[index]);
-        }
-
         if (window.innerWidth > 768) {
             navbar.classList.remove("nav--open-menu");
             overlay.classList.remove("overlay");
         } else {
             toggleMenu();
         };
+        link.classList.add("nav__link--active");
+        siblingLinks = [...navLink].filter(child => child != link)
+        siblingLinks.forEach(element => { element.classList.remove("nav__link--active") });
 
-        // if (link.classList.contains("nav__link--active")) {
-        //     link.classList.remove("nav__link--active");
-        // } else {
-        //     link.classList.add("nav__link--active");
-        // }
     });
 
 });
@@ -52,10 +43,4 @@ navLink.forEach(link => {
 //set scroll padding top dynamically
 document.documentElement.style.setProperty("--scroll-padding", (header.offsetHeight - 1) + "px");
 
-// for (var i = 0; i < navLink.length; i++) {
-//     navLink[i].addEventListener("click", function () {
-//         var current = document.getElementsByClassName(".nav__link");
-//         current[0].className = current[0].className.replace("nav__link--active", "");
-//         this.className += " nav__link--active";
-//     });
-// }
+
