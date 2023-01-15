@@ -12,6 +12,11 @@
     border: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, rem(50));
+}
+
 // set up body 
 body {
     font-family: $ff-sans-serif;
@@ -56,7 +61,6 @@ a:visited,
 a:active {
     cursor: pointer;
     text-decoration: none;
-    color: inherit;
 }
 
 // buutons
