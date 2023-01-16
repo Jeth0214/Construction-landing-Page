@@ -118,7 +118,14 @@ $utilities: (
         )),
     "cursor": (prefix:"cursor",
         values: ("default":pointer,
-        ))
+        )),
+
+    "position": (prefix:"position",
+        values: ("relative": relative,
+            "static": static,
+            "absolute": absolute,
+            "fixed": fixed,
+            "sticky": sticky))
 );
 
 
