@@ -5,7 +5,6 @@ const navLinks = document.querySelector(".nav__links");
 const navLink = document.querySelectorAll(".nav__link");
 const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
-// const sections = document.querySelectorAll("section[id]");
 
 /** auto hide toggle menu and overlay when the user resize the window */
 window.addEventListener("resize", () => {
@@ -85,5 +84,12 @@ function navHighlighter() {
             link.classList.remove("nav__link--active");
         }
     })
+}
+
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
