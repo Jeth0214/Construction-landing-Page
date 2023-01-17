@@ -5,6 +5,7 @@ const navLinks = document.querySelector(".nav__links");
 const navLink = document.querySelectorAll(".nav__link");
 const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
+const fabButton = document.querySelector(".fab-button");
 
 /** auto hide toggle menu and overlay when the user resize the window */
 window.addEventListener("resize", () => {
@@ -18,8 +19,12 @@ window.addEventListener("resize", () => {
 document.documentElement.style.setProperty("--scroll-padding", (header.offsetHeight - 1) + "px");
 
 // add an event listener for scroll
-window.addEventListener("scroll", navHighlighter)
-
+//window.addEventListener("scroll", navHighlighter, console.log("scroll"));
+window.onscroll = function () {
+    console.log("scroll");
+    navHighlighter();
+    showFabButton();
+}
 // hide and show toggle menu using the hamburger menu
 navToggle.addEventListener("click", () => {
     toggleMenu();
@@ -91,5 +96,20 @@ function navHighlighter() {
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+// When the user scrolls down 60px  from the top , shrink the navbar and show the scroll top button
+function showFabButton() {
+    console.log("click");
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        fabButton.style.display = "block";
+        header.classList.add("bg-light", "box-shadow");
+        header.classList.add("bg-light", "box-shadow");
+        navbar.classList.add("nav__brand--shrink");
+    } else {
+        fabButton.style.display = "none";
+        header.classList.remove("bg-light", "box-shadow");
+        navbar.classList.remove("nav__brand--shrink");
+    }
 }
 
