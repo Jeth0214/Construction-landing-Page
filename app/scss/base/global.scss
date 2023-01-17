@@ -31,11 +31,7 @@
     animation: fade-out 300ms ease-out forwards;
 }
 
-.scroll-to-top {
-    right: rem(20);
-    bottom: rem(20);
-    height: rem(60);
-    width: rem(60);
-    font-size: rem(30);
-    border-width: rem(3);
+//
+.box-shadow {
+    box-shadow: $base-box-shadows;
 }

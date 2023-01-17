@@ -35,3 +35,25 @@ $value in $colors {
     }
 
 }
+
+// fab button
+.fab-button {
+    display: none;
+    right: rem(5);
+    bottom: rem(20);
+    height: rem(40);
+    width: rem(40);
+    font-size: rem(20);
+    border-width: rem(3);
+    z-index: 99;
+    animation: opac 300ms ease-in-out forwards;
+
+    @include breakpoints-up("md") {
+
+        right: rem(20);
+        bottom: rem(20);
+        height: rem(60);
+        width: rem(60);
+        font-size: rem(30);
+    }
+}

@@ -8,24 +8,25 @@
 
     .nav__brand {
         .nav__brand-image {
-            height: rem(30);
+            height: rem(35);
 
             @include breakpoints-up("md") {
-                height: rem(35);
+                height: rem(40);
             }
         }
 
         .nav__brand-name {
             font-weight: bold;
-            font-size: rem(16);
+            font-size: rem(18);
             color: darken($primary, 10%);
 
             @include breakpoints-up("md") {
-                font-size: rem(20);
+                font-size: rem(24);
             }
         }
 
     }
+
 
     .nav__toggle {
         cursor: pointer;
@@ -161,5 +162,19 @@
         align-items: center;
         z-index: 3;
         animation: opac .5s linear;
+    }
+}
+
+// style nav brand on scroll
+.nav__brand--shrink {
+    .nav__brand {
+
+        .nav__brand-image {
+            height: rem(30);
+        }
+
+        .nav__brand-name {
+            font-size: rem(16);
+        }
     }
 }
