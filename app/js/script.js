@@ -21,7 +21,6 @@ document.documentElement.style.setProperty("--scroll-padding", (header.offsetHei
 // add an event listener for scroll
 //window.addEventListener("scroll", navHighlighter, console.log("scroll"));
 window.onscroll = function () {
-    console.log("scroll");
     navHighlighter();
     showFabButton();
 }
@@ -56,6 +55,8 @@ navLink.forEach(link => {
 function toggleMenu() {
     overlay.classList.toggle("overlay");
     navbar.classList.toggle("nav--open-menu");
+    header.classList.toggle("bg-dark");
+    fabButton.style.display = "none";
 }
 
 /*
@@ -96,20 +97,23 @@ function navHighlighter() {
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+    overlay.classList.remove("overlay");
+    navbar.classList.remove("nav--open-menu");
+    history.replaceState(null, "", location.origin);
 }
 
 // When the user scrolls down 60px  from the top , shrink the navbar and show the scroll top button
 function showFabButton() {
-    console.log("click");
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
         fabButton.style.display = "block";
-        header.classList.add("bg-light", "box-shadow");
-        header.classList.add("bg-light", "box-shadow");
+        header.classList.add("bg-dark", "box-shadow");
         navbar.classList.add("nav__brand--shrink");
+
     } else {
         fabButton.style.display = "none";
-        header.classList.remove("bg-light", "box-shadow");
+        header.classList.remove("bg-dark", "box-shadow");
         navbar.classList.remove("nav__brand--shrink");
     }
+
 }
 
