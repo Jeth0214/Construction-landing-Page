@@ -45,7 +45,7 @@ $value in $colors {
     width: rem(40);
     font-size: rem(20);
     border-width: rem(3);
-    z-index: 99;
+    z-index: 120;
     animation: opac 300ms ease-in-out forwards;
 
     @include breakpoints-up("md") {

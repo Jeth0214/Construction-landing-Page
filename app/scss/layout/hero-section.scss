@@ -1,0 +1,9 @@
+@use 'abstract' as *;
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: url('../assets/images/home/home.png') no-repeat;
+}
