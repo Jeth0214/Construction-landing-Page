@@ -1,9 +1,21 @@
 @use 'abstract' as *;
 
 .hero {
-    min-height: 100vh;
+    padding: rem(230) 0;
     display: flex;
     justify-content: end;
     align-items: center;
-    background: url('../assets/images/home/home.png') no-repeat;
+    background: url('../assets/images/about_us/about2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoints-up("md") {
+        padding: rem(268) 0;
+        background-size: cover;
+        background-position: bottom right 40%;
+        background-color: #939393;
+        background-blend-mode: multiply;
+        background: url('../assets/images/home/hero.png');
+    }
 }

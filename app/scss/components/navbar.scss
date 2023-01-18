@@ -18,7 +18,7 @@
         .nav__brand-name {
             font-weight: bold;
             font-size: rem(18);
-            color: darken($primary, 10%);
+            color: lighten($primary, 10%);
 
             @include breakpoints-up("md") {
                 font-size: rem(24);
@@ -82,9 +82,6 @@
             position: relative;
             transition: all 0.2s ease-in-out;
 
-
-
-
             &:hover {
                 color: $primary;
             }
@@ -94,7 +91,11 @@
                 margin-bottom: rem(20);
 
                 @include breakpoints-up("md") {
-                    margin-right: rem(16);
+                    margin-right: rem(10);
+                }
+
+                @include breakpoints-up("lg") {
+                    margin-right: rem(20);
                 }
             }
 
