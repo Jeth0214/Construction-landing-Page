@@ -18,6 +18,14 @@
     }
 }
 
+.hide-for-medium {
+    display: none;
+
+    @include breakpoints-up("lg") {
+        display: block;
+    }
+}
+
 .cursor {
     cursor: pointer;
 }
