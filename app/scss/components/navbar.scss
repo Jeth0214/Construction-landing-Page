@@ -110,7 +110,11 @@
                 transition: all .2s ease-in-out;
 
                 @include breakpoints-up("md") {
-                    top: rem(36);
+                    top: rem(39);
+                }
+
+                @include breakpoints-up("lg") {
+                    top: rem(42);
                 }
             }
         }
@@ -132,6 +136,8 @@
 
 // for mobile open menu 
 .nav--open-menu {
+    padding: 20px 0;
+
     .nav__toggle {
 
         .nav__burger-line--1 {
