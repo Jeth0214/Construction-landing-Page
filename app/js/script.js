@@ -21,6 +21,14 @@ document.documentElement.style.setProperty("--scroll-padding", (header.offsetHei
 // add an event listener for scroll
 //window.addEventListener("scroll", navHighlighter, console.log("scroll"));
 window.onscroll = function () {
+    console.log(window.pageYOffset)
+    if (window.pageYOffset > 80 || navbar.classList.contains("nav--open-menu")) {
+        header.classList.add("bg-dark", "box-shadow");
+        navbar.classList.add("nav__brand--shrink");
+    } else {
+        header.classList.remove("bg-dark", "box-shadow");
+        navbar.classList.remove("nav__brand--shrink");
+    }
     navHighlighter();
     showFabButton();
 }
@@ -53,10 +61,11 @@ navLink.forEach(link => {
 
 // hide and show toggle menu function 
 function toggleMenu() {
+    fabButton.style.display = "none";
     overlay.classList.toggle("overlay");
     navbar.classList.toggle("nav--open-menu");
-    header.classList.toggle("bg-dark");
-    fabButton.style.display = "none";
+    header.classList.add("bg-dark", "box-shadow");
+
 }
 
 /*
@@ -106,13 +115,8 @@ function scrollToTop() {
 function showFabButton() {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
         fabButton.style.display = "block";
-        header.classList.add("bg-dark", "box-shadow");
-        navbar.classList.add("nav__brand--shrink");
-
     } else {
         fabButton.style.display = "none";
-        header.classList.remove("bg-dark", "box-shadow");
-        navbar.classList.remove("nav__brand--shrink");
     }
 
 }
