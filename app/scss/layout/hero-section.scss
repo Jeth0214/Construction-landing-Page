@@ -12,7 +12,6 @@
     background-blend-mode: multiply;
 
     @include breakpoints-up("md") {
-        // background-color: #777676;
         padding: rem(170) 0;
         background-position: bottom right 40%;
 
@@ -23,7 +22,7 @@
 
         @include breakpoints-up("md") {
             text-align: left;
-            max-width: 75%;
+            max-width: 70%;
         }
     }
 }

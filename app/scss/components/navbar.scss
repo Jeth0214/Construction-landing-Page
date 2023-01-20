@@ -111,11 +111,11 @@
                 transition: all .2s ease-in-out;
 
                 @include breakpoints-up("md") {
-                    top: rem(39);
+                    top: rem(36);
                 }
 
                 @include breakpoints-up("lg") {
-                    top: rem(42);
+                    top: rem(39);
                 }
             }
         }
