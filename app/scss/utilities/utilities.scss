@@ -129,7 +129,11 @@ $utilities: (
     "line-height": (prefix:"lh",
         values: ("lh-base": $lh-base,
             "lh-small": $lh-small,
-            "lh-ba": $lh-large ))
+            "lh-ba": $lh-large )),
+    "text-align": (prefix:"text", values: ("left": left,
+            "right": right,
+            "center": center,
+            "justify": justify))
 );
 
 
