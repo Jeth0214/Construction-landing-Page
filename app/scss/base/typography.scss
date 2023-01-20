@@ -1,5 +1,16 @@
 @use 'abstract' as *;
 
+@mixin header-underline($top: 28, $width: 50%, $height: 3) {
+    content: "";
+    position: absolute;
+    height: rem($height);
+    background-color: $primary;
+    top: rem($top);
+    width: $width;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 $text-header-sizes: (
     "h1": $fs-h1,
     "h2": $fs-h2,
@@ -33,14 +44,17 @@ $value in $text-header-sizes {
     position: relative;
 
     &::before {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        height: rem(3);
-        background-color: $primary;
-        top: rem(28);
-        width: 98%;
-        left: 50%;
-        transform: translateX(-50%);
+        @include header-underline(28, 98%);
     }
+}
+
+.h2 {
+    .header-underline {
+        position: relative;
+
+        &::before {
+            @include header-underline(40, 60%, 5);
+        }
+    }
+
 }
