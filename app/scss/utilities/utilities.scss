@@ -125,7 +125,11 @@ $utilities: (
             "static": static,
             "absolute": absolute,
             "fixed": fixed,
-            "sticky": sticky))
+            "sticky": sticky)),
+    "line-height": (prefix:"lh",
+        values: ("lh-base": $lh-base,
+            "lh-small": $lh-small,
+            "lh-ba": $lh-large ))
 );
 
 

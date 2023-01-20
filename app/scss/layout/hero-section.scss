@@ -1,21 +1,29 @@
 @use 'abstract' as *;
 
 .hero {
-    padding: rem(230) 0;
+    padding: rem(130) 0;
     display: flex;
     justify-content: end;
     align-items: center;
-    background: url('../assets/images/about_us/about2.png');
-    background-repeat: no-repeat;
+    background-color: #393939;
+    background-image: url('../assets/images/home/hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: center right 30%;
+    background-blend-mode: multiply;
 
     @include breakpoints-up("md") {
-        padding: rem(268) 0;
-        background-size: cover;
+        // background-color: #777676;
+        padding: rem(170) 0;
         background-position: bottom right 40%;
-        background-color: #777676;
-        background-blend-mode: multiply;
-        background: url('../assets/images/home/hero.png');
+
+    }
+
+    .hero__text {
+        text-align: center;
+
+        @include breakpoints-up("md") {
+            text-align: left;
+            max-width: 75%;
+        }
     }
 }

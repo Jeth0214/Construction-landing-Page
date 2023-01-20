@@ -81,6 +81,7 @@
         .nav__link {
             position: relative;
             transition: all 0.2s ease-in-out;
+            letter-spacing: 2px;
 
             &:hover {
                 color: $primary;

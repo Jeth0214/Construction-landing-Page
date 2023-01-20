@@ -1,0 +1,46 @@
+@use 'abstract' as *;
+
+$text-header-sizes: (
+    "h1": $fs-h1,
+    "h2": $fs-h2,
+    "h3": $fs-h3,
+    "h4": $fs-h4,
+    "h5": $fs-h5,
+);
+
+
+@each $key,
+$value in $text-header-sizes {
+    @if($key =="h1") {
+        .h1 {
+            font-size: clamp(3rem, 5vw + 1rem, $value);
+            line-height: 1;
+        }
+    }
+
+    @else {
+        .#{$key} {
+            font-size: $value;
+
+            @include breakpoints-down("small") {
+                font-size: $value - rem(2);
+            }
+        }
+    }
+}
+
+.header-underline {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: rem(3);
+        background-color: $primary;
+        top: rem(28);
+        width: 98%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
