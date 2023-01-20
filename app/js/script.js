@@ -19,9 +19,7 @@ window.addEventListener("resize", () => {
 document.documentElement.style.setProperty("--scroll-padding", (header.offsetHeight - 1) + "px");
 
 // add an event listener for scroll
-//window.addEventListener("scroll", navHighlighter, console.log("scroll"));
 window.onscroll = function () {
-    console.log(window.pageYOffset)
     if (window.pageYOffset > 80 || navbar.classList.contains("nav--open-menu")) {
         header.classList.add("bg-dark", "box-shadow");
         navbar.classList.add("nav__brand--shrink");
