@@ -53,7 +53,7 @@ $value in $text-header-sizes {
         position: relative;
 
         &::before {
-            @include header-underline(40, 60%, 5);
+            @include header-underline(45, 60%, 5);
         }
     }
 

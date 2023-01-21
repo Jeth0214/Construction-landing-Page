@@ -1,0 +1,22 @@
+@use 'abstract' as *;
+
+.services {
+    .service {
+        transition: transform 500ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .service__image {
+            border-radius: 50%;
+            font-size: rem(45);
+            width: 50px;
+            padding: rem(15);
+            margin: auto;
+            width: rem(100);
+            background-image: linear-gradient(-45deg, $secondary, $primary);
+        }
+    }
+}
