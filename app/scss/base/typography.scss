@@ -22,6 +22,7 @@ $text-header-sizes: (
 
 @each $key,
 $value in $text-header-sizes {
+
     @if($key =="h1") {
         .h1 {
             font-size: clamp(3rem, 5vw + 1rem, $value);
