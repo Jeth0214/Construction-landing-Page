@@ -1,0 +1,23 @@
+@use 'abstract' as *;
+
+.testimonies {
+    .testimonies__list {
+        .testimonies__item {
+            position: relative;
+
+            .testimonies__client {
+                position: absolute;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                bottom: 10px;
+
+                img {
+                    width: 90px;
+                    border: 1px solid $primary;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
