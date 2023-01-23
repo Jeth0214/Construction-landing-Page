@@ -1,0 +1,8 @@
+@use 'abstract' as *;
+
+.banners {
+    background-color: $secondary;
+    background-image: url(../../../assets/images/banner/work-flow-bg2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
