@@ -7,14 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/home/emojione-monotone_construction-worker.svg" type="image/x-icon">
     <title>WeConstruct</title>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="dist/swiper-bundle.min.css">
+
     <!-- Core Theme Css -->
     <link rel="stylesheet" href="dist/style.css">
+
+    <!-- Swiper Js -->
+    <script defer src="dist/swiper-bundle.min.js"></script>
     <!-- JavaScript Link -->
-    <script defer src="app/js/script.js"></script>
+    <script defer src="dist/script.js"></script>
 </head>
 
 <body>
@@ -68,9 +75,9 @@
                     <div class="hero__description h4 mt-2 mb-2">
                         <p>We always prioritize the maximum possible result with modern methods and the latest
                             technology.</p>
-                        <p class="mt-2">We <span class="text-primary header-underline fw-700 fade-in">Build</span>. We
-                            <span class="text-primary header-underline fw-700 fade-in">Modify</span>. We <span
-                                class="text-primary header-underline fw-700 fade-in">Develop</span>.
+                        <p class="mt-2">We <span class="text-primary fw-700 fade-in">Build</span>. We
+                            <span class="text-primary fw-700 fade-in">Modify</span>. We <span
+                                class="text-primary fw-700 fade-in">Develop</span>.
                         </p>
                     </div>
                     <a href="#contact-us" class="btn display-i-b btn-primary h5 text-white">
@@ -301,45 +308,67 @@
         <!-- End Of Banner Section -->
 
         <!-- Testimonials -->
-        <section id="testimonies" class="text-center container bg-light section">
-            <div class=" testimonies ">
+        <section id="testimonies" class=" text-center  section">
+            <div class=" testimonies container bg-light p-5 br">
                 <h2 class="h2"> <span class="header-underline">Testimonies</span> </h2>
                 <p class="mt-2 mb-3">
                     We love reviews. Here are some of clients testimonies about how great and efficient our service is.
-                    <br>
-                    Every of how clients are considered as family here at WeConstruct Construction.
                 </p>
 
-                <div class="testimonies__list">
-                    <div class="testimonies__item card p-3">
-                        <p class="testimonies__message">
-                            WeConstruct have been leading the construction industry for quiet sometime now and
-                            when they handled our bifrost, they job was nothing short of amazing.
-                        </p>
-                        <div class="testimonies__client">
-                            <img loading="lazy" src="/assets/images/testimonial/odin.jpg" alt="King Odin">
-                            <div class="testimonies__client-info">
-                                <h3 class="testimonies__client-name h3 text-primary">King Odin</h3>
-                                <p class=" testimonies__client-role text-dark-gray">King of Asgard</p>
+                <div class="swiper mySwiper">
+                    <div class="testimonies__list swiper-wrapper">
+                        <div class="testimonies__item swiper-slide">
+                            <p class="testimonies__message">
+                                <em> <span class="text-primary">WeConstruct</span> have been leading the construction
+                                    industry for quiet sometime now and
+                                    when they handled our bifrost, they job was nothing short of amazing.</em>
+                            </p>
+                            <div class="rating text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonies__client">
+                                <img loading="lazy" src="/assets/images/testimonial/odin.jpg" alt="King Odin">
+                                <div class="testimonies__client-info">
+                                    <h3 class="testimonies__client-name h3 text-primary">King Odin</h3>
+                                    <p class=" testimonies__client-role text-dark-gray">King of Asgard</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonies__item" style="margin-top: 550px;">
-                        <p class="testimonies__message">
-                            We absolutely loved working with WeConstruct! They built our home very quickly with the
-                            highest of quality and care.
-                            I would hands down refer them to anyone and everyone!
-                        </p>
-                        <div class="testimonies__client">
-                            <img loading="lazy" src="/assets/images/testimonial/Thor.jpg" alt="Thor">
-                            <div class="testimonies__client-info">
-                                <h4 class="testimonies__client-name">Thor son of Odin</h4>
-                                <p class=" testimonies__client-role">King, New Asgardian Residence</p>
+                        <div class="testimonies__item swiper-slide">
+                            <p class="testimonies__message">
+                                <em>
+                                    We absolutely loved working with WeConstruct! They built our home very quickly with
+                                    the
+                                    highest of quality and care. I would hands down refer them to anyone and everyone!
+                                </em>
+                            </p>
+                            <div class="rating text-secondary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonies__client">
+                                <img loading="lazy" src="/assets/images/testimonial/Thor.jpg" alt="Thor">
+                                <div class="testimonies__client-info">
+                                    <h3 class="testimonies__client-name h3 text-primary">Thor son of Odin</h3>
+                                    <p class=" testimonies__client-role">King, New Asgardian Residence</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="testimonies__list fade">
+            </div>
+            <!-- <div class="testimonies__list fade">
                     <div class="testimonies__item">
                         <p class="testimonies__message">
                             WeConstruct go above and beyond in what is required to make the customer happy
@@ -383,7 +412,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- End of Testimonials -->
