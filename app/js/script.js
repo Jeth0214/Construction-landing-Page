@@ -7,6 +7,22 @@ const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
 const fabButton = document.querySelector(".fab-button");
 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 /** auto hide toggle menu and overlay when the user resize the window */
 window.addEventListener("resize", () => {
     if (window.innerWidth > 500) {

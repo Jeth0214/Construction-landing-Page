@@ -1,17 +1,52 @@
 @use 'abstract' as *;
 
 .testimonies {
+
+
     .testimonies__list {
         .testimonies__item {
             position: relative;
-            width: rem(500);
+            max-width: rem(500);
+            border-radius: 10px;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: $white;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 75%;
+                border-radius: 10px;
+                box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
+                @include breakpoints-up("md") {
+                    height: 70%;
+                }
+            }
+
+            .rating {
+                position: relative;
+            }
+
+            .testimonies__message {
+                position: relative;
+                padding: 30px 20px 10px;
+                font-size: 16px;
+                background-color: $white;
+                background-image: url('../assets/images/testimonial/quotation.svg');
+                background-repeat: no-repeat;
+                background-position: top 10px right 45px;
+                background-size: 15%;
+            }
 
             .testimonies__client {
-                position: absolute;
+                position: relative;
                 display: flex;
                 gap: 10px;
                 align-items: center;
-                bottom: 10px;
 
                 img {
                     width: 90px;
