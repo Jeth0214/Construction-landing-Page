@@ -6,57 +6,59 @@
     .testimonies__list {
         .testimonies__item {
             position: relative;
-            // max-width: rem(500);
-            border-radius: 10px;
+            border-radius: rem(10);
             overflow: hidden;
-
-            &::before {
-                content: '';
-                position: absolute;
-                background-color: $white;
-                width: 100%;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 75%;
-                border-radius: 10px;
-                box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-
-                @include breakpoints-up("md") {
-                    height: 70%;
-                }
-            }
-
-            .rating {
-                position: relative;
-            }
+            cursor: pointer;
 
             .testimonies__message {
-                position: relative;
-                padding: 30px 20px 10px;
-                font-size: 16px;
-                background-color: $white;
-                background-image: url('../assets/images/testimonial/quotation.svg');
-                background-repeat: no-repeat;
+                background-color: #fff;
+                background-image: url(../assets/images/testimonial/quotation.svg);
                 background-position: top 10px right 45px;
+                background-repeat: no-repeat;
                 background-size: 15%;
+                font-size: rem(16);
+                padding: 30px 20px 10px;
+                position: relative;
+                border-radius: rem(10);
+
+                p {
+                    position: relative;
+                }
+
+                .rating {
+                    position: relative;
+                }
+
+                &::before {
+                    border-radius: inherit;
+                    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .25);
+                    content: "";
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    bottom: 0;
+                }
             }
 
             .testimonies__client {
                 position: relative;
+                margin-top: -13px;
                 display: flex;
-                gap: 10px;
+                gap: rem(10);
                 align-items: center;
+                line-height: 1.25;
 
                 .testimonies__client-image {
-                    width: 80px;
-                    height: 80px;
-                    border: 2px solid $primary;
+                    width: rem(80);
+                    height: rem(80);
+                    border: rem(3) solid $primary;
                     border-radius: 50%;
                     overflow: hidden;
 
                     img {
-                        padding: 2px;
+                        padding: rem(2);
                         border-radius: inherit;
                         width: 100%;
                         height: 100%;
