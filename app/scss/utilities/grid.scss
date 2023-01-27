@@ -13,7 +13,6 @@ $grid-gaps: (
 
 
 @mixin calcWidth($col, $grid-columns) {
-    flex-grow: 0;
     width: math.div($col * 100%, $grid-columns)
 }
 
