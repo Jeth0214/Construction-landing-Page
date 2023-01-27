@@ -3,6 +3,7 @@
 .services {
     .service {
         transition: transform 500ms ease-in-out;
+        background-color: $white;
 
         &:hover {
             cursor: pointer;
