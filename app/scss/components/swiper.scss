@@ -1,0 +1,54 @@
+@use 'abstract' as *;
+
+.swiper {
+    padding: 2em 1em;
+
+
+    @include breakpoints-up("md") {
+        padding: 2em;
+    }
+
+    @include breakpoints-up("lg") {
+        padding: 4em;
+    }
+
+    .swiper-button-next {
+        display: none;
+
+        @include breakpoints-up("lg") {
+            display: block;
+        }
+    }
+
+    .swiper-button-prev {
+        display: none;
+
+        @include breakpoints-up("lg") {
+            display: block;
+        }
+    }
+
+    .swiper-navBtn {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        height: rem(12);
+        width: rem(12);
+        background-color: $secondary;
+        opacity: .7;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: darken($secondary, 5%);
+    }
+}

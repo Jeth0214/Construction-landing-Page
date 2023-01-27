@@ -7,39 +7,7 @@ const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
 const fabButton = document.querySelector(".fab-button");
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    //loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        // // when window width is >= 320px
-        // 320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        // },
-        // // when window width is >= 480px
-        // 480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        // },
-        // when window width is >= 640px
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            slidesPerGroup: 2,
-        }
-    }
-});
+
 
 /** auto hide toggle menu and overlay when the user resize the window */
 window.addEventListener("resize", () => {
@@ -152,4 +120,38 @@ function showFabButton() {
     }
 
 }
+
+
+
+// swiper configurations
+let swiper = new Swiper(".testimonials ", {
+    slidesPerView: 1,
+    spaceBetween: 35,
+    slidesPerGroup: 1,
+    grabCursor: true,
+    centerSlide: true,
+    fade: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 2,
+        },
+        960: {
+            spaceBetween: 60,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        }
+    }
+});
+
 
