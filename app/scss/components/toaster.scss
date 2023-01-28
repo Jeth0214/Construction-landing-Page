@@ -1,0 +1,15 @@
+@use 'abstract' as *;
+
+.toaster {
+
+    position: fixed;
+    background-color: #c4f0c4;
+    color: #068a06;
+    padding: rem(25) rem(40);
+    right: rem(20);
+    border-radius: rem(5);
+    z-index: 120;
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+}

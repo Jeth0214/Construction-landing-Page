@@ -9,7 +9,6 @@ const submitForm = (e) => {
         hasError += validate(formControls[i]);
     }
     if (hasError) {
-        console.log(hasError);
         return;
     }
     sendEmail(e);
@@ -18,7 +17,6 @@ const submitForm = (e) => {
 // submit form data to my email
 const sendEmail = async (e) => {
     var data = new FormData(e.target);
-    console.log(data)
     fetch(e.target.action, {
         method: contactForm.method,
         body: data,
@@ -26,9 +24,9 @@ const sendEmail = async (e) => {
             'Accept': 'application/json',
         }
     }).then(response => {
-        console.log(response)
-        if (response.ok) {
-            // showToaster();
+        console.log(response);
+        if (response.status === 200) {
+            showToaster();
             contactForm.reset();
         }
     }).catch(error => {
@@ -40,7 +38,6 @@ const sendEmail = async (e) => {
 
 const validate = (formControl) => {
     let formControlValue = formControl.value.trim();
-    console.log(formControlValue);
     let errorMessage = "";
 
     // validate required fields
@@ -94,9 +91,12 @@ const validate = (formControl) => {
     return errorMessage;
 }
 
-// const showToaster = () => {
-//     const toaster = document.getElementById("toaster");
-//     toaster.style.opacity = "1";
-//     setTimeout(() => { toaster.style.opacity = "0"; }, 2000)
-// }
+const showToaster = () => {
+    const toaster = document.getElementById("toaster");
+    toaster.classList.add("fade-in");
+    setTimeout(() => {
+        toaster.classList.remove("fade-in");
+        toaster.classList.add("fade-out");
+    }, 7000)
+}
 
