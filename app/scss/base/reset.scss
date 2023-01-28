@@ -63,10 +63,16 @@ a:active {
     text-decoration: none;
 }
 
-// buutons
+// buttons
 button {
     cursor: pointer;
     font: inherit
+}
+
+// forms
+input,
+textarea {
+    font-family: inherit;
 }
 
 /* remove animations for people who turned it off*/
