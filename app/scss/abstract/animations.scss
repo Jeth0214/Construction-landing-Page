@@ -3,15 +3,16 @@
 @keyframes fade-in {
     from {
         visibility: hidden;
-        opacity: 0
+        opacity: 0;
     }
 
     1% {
         visibility: visible;
-        opacity: 0;
+        opacity: 0.3;
     }
 
     to {
+        visibility: visible;
         opacity: 1
     }
 }

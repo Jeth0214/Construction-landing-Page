@@ -32,7 +32,7 @@
 
 // some global animations {
 .fade-in {
-    animation: fade-in 300ms ease-in forwards;
+    animation: fade-in 500ms ease-in forwards;
 }
 
 .fade-out {
@@ -49,4 +49,23 @@
 
 .section {
     padding: rem(60) 0;
+}
+
+// border line in sections
+.border-line {
+    position: relative;
+
+    @include breakpoints-up("md") {
+
+        &::before {
+            content: "";
+            background-color: $primary;
+            bottom: 0;
+            height: 92%;
+            position: absolute;
+            right: -20%;
+            transform: translatey(-4%);
+            width: 4px;
+        }
+    }
 }

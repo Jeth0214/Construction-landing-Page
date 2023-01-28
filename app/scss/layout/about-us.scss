@@ -10,24 +10,4 @@
             text-align: left;
         }
     }
-
-    .about-us__company {
-        position: relative;
-
-        @include breakpoints-up("md") {
-
-            &::before {
-                content: "";
-                background-color: $primary;
-                bottom: 0;
-                height: 92%;
-                position: absolute;
-                right: -20%;
-                transform: translatey(-4%);
-                width: 4px;
-            }
-        }
-
-
-    }
 }
