@@ -1,0 +1,109 @@
+@use 'abstract' as *;
+
+.form {
+    .form__group {
+        display: grid;
+        gap: rem(5);
+        margin-bottom: rem(15);
+
+        .form__control {
+            border: 1px solid lighten($primary, 30%);
+            padding: rem(10);
+            background-color: lighten($light, 7%);
+
+            &:focus {
+                outline: 1px solid $primary;
+                background-color: $white;
+            }
+
+            &:active {
+                outline: 2px solid $primary;
+                background-color: $white;
+            }
+        }
+
+        .form__control--textarea {
+            width: 100%;
+            resize: none;
+        }
+
+        .form__error {
+            border: 1px solid $error;
+            padding: rem(10);
+            background-color: lighten($light, 7%);
+
+            &:focus {
+                outline: 1px solid $error;
+                background-color: $white;
+            }
+
+            &:active {
+                outline: 2px solid $error;
+                background-color: $white;
+            }
+        }
+
+
+    }
+
+    .form__checkbox {
+        margin: rem(15) 0;
+
+        .checkbox {
+            display: block;
+            position: relative;
+            padding-left: rem(35);
+            user-select: none;
+            cursor: pointer;
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: rem(20);
+                width: rem(20);
+                border-radius: rem(3);
+                background-color: lighten($light, 7%);
+                border: 1px solid lighten($primary, 30%);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: none;
+                    left: rem(8);
+                    top: 0;
+                    width: rem(5);
+                    height: rem(15);
+                    border: solid white;
+                    border-width: 0 rem(3) rem(3) 0;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:hover {
+                input~.checkmark {
+                    background-color: $white;
+                    border: 1px solid $primary;
+                }
+            }
+
+            input:checked~.checkmark {
+                background-color: $primary;
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+}

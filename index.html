@@ -22,6 +22,7 @@
     <script defer src="dist/swiper-bundle.min.js"></script>
     <!-- JavaScript Link -->
     <script defer src="dist/script.js"></script>
+    <script defer src="dist/form.js"></script>
 </head>
 
 <body>
@@ -66,6 +67,10 @@
             <span class="sr-only">Button to scroll to the top</span>
             <i class="fa-solid fa-chevron-up"></i>
         </button>
+        <!-- Form toaster message -->
+        <section id="toaster">
+            <p>Thanks for being interested in working with me</p>
+        </section>
         <!-- Hero Section -->
         <section class="hero ">
             <div class="container">
@@ -507,8 +512,6 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-
-            </div>
         </section>
         <!-- End of Testimonials -->
 
@@ -550,7 +553,7 @@
                         <div class="card-header">
                             <div class="card__title">
                                 <h5 class="h5 pl-2 pt-2 pb-2">
-                                    Biggest construction stories.
+                                    10 Biggest construction stories.
                                 </h5>
                             </div>
                             <img loading="lazy" src="/assets/images/blog/blog2.png" class="card__image">
@@ -597,45 +600,68 @@
         <!-- End of Blogs Section -->
 
         <!-- Contact Us Section -->
-        <section id="contact-us" class="contact-us pt-3 pb-3">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12>
-                              <form>
-                                  <div class=" form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" name="fullName" class="form-control" id="fullName" placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input type="text" name="phoneNumber" class="form-control" id="phoneNumber"
-                            placeholder="(+123) 023456789">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" name="email" class="form-control" id="email"
-                            placeholder="johndoe@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea name="message" name="message" id="message" cols="30"
-                            rows="10">Write your message</textarea>
-                    </div>
-                    <input type="submit" value="Submit">
+        <section id="contact-us" class="container contact-us section">
+            <div class="text-center">
+
+                <h2 class="h2"> <span class="header-underline">Contact Us</span> </h2>
+                <p class="mt-2 mb-3">
+                    Don't hesitate to contact us.
+                </p>
+            </div>
+            <div class="row justify-space-between">
+                <div class="contact-form col-12-xs col-5-md">
+                    <h3>Message Us</h3>
+                    <form class="mt-2 form" id="contactForm" onSubmit="submitForm(event)"
+                        action="https://formspree.io/f/xgedlqdl" method="POST" novalidate>
+                        <div class="form__group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" name="fullName" class="form__control" id="fullName"
+                                placeholder="John Doe">
+                            <small class="text-error"></small>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" name="phoneNumber" class="form__control" id="phoneNumber"
+                                placeholder="+123 023456789">
+                            <small class="text-error"></small>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="form__control" id="email"
+                                placeholder="johndoe@gmail.com">
+                            <small class="text-error"></small>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message">Message</label>
+                            <textarea class="form__control form__control--textarea" name="message" id="message"
+                                cols="30" rows="10" placeholder=" How can I help?"></textarea>
+                            <small class="text-error"></small>
+                        </div>
+                        <div class="form__checkbox">
+                            <label for="subscribe" class="checkbox">
+                                Subscribe to our blogs?
+                                <input type="checkbox" id="subscribe" name="subscribe" value="true">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <button id="submit" class="btn-primary text-white pt-1 pb-1 pl-3 pr-3 h4"
+                            type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="col">
+                <div class="col-5-md col-12-xs">
                     <h3>Office Location</h3>
                     <p>
                         <img loading="lazy" src="/assets/images/projects/icons8_marker_100px 1.png">
                         5th Floor Mozun
                         Building, Rocky Road, Gotham - Wakanda
                     </p>
-                    <iframe
+                    <!-- <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4911588753216!2d3.334067814266794!3d6.585703724265425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91f4561a4f95%3A0x35b4d251e9caeb49!2sTijani%20Ahmed%20Way%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sar!4v1593524047503!5m2!1sen!2sar"
                         width="inherit" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0" class="w-100"></iframe>
+                        aria-hidden="false" tabindex="0" class="w-100"></iframe> -->
                 </div>
             </div>
         </section>
@@ -699,14 +725,24 @@
             <div class="col">
                 <h4>Social Media</h4>
                 <div class="social-media-links">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank">
-                        <<i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="/" target="_blank"><i class="fa-solid fa-browser"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="/" target="_blank">
+                        <i class="fa-solid fa-browser"></i>
+                    </a>
                 </div>
             </div>
         </div>

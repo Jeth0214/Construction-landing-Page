@@ -3,6 +3,7 @@
 /** Colors  */
 $primary: #32cd32 !default;
 $secondary: #22cccc !default;
+$error: #f42f2f !default;
 $dark-gray: #5E5C47 !default;
 $dark: #1E1B1C !default;
 $light: #EDEEE8 !default;
@@ -15,6 +16,7 @@ $ff-sans-serif: 'Poppins', sans-serif;
 $colors: (
     "primary": $primary,
     "secondary": $secondary,
+    "error": $error,
     "dark-gray": $dark-gray,
     "dark": $dark,
     "light": $light,

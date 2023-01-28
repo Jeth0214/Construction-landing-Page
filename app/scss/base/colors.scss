@@ -23,4 +23,8 @@ $value in $colors {
     .border-#{$key} {
         border: $base-border-thickness solid 1px $value;
     }
+
+    .outline-#{$key} {
+        outline: $base-border-thickness solid 1px $value;
+    }
 }
