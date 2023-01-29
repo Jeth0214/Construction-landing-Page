@@ -611,40 +611,40 @@
                     Don't hesitate to contact us.
                 </p>
             </div>
-            <div class="row justify-space-between">
-                <div class="contact-form col-12-xs col-5-md border-line">
-                    <h3>Message Us</h3>
+            <div class="row gap-3 justify-space-between mt-4">
+                <div class="contact__form col-12-xs col-5-md border-line">
+                    <h3 class="h3">Message Us</h3>
                     <form class="mt-2 form" id="contactForm" onSubmit="submitForm(event)"
                         action="https://formspree.io/f/xgedlqdl" method="POST" novalidate>
                         <div class="form__group">
-                            <label for="fullName">Full Name</label>
+                            <label class="h5" for="fullName">Full Name</label>
                             <input type="text" name="fullName" class="form__control" id="fullName"
                                 placeholder="John Doe">
                             <small class="text-error"></small>
                         </div>
 
                         <div class="form__group">
-                            <label for="phoneNumber">Phone Number</label>
+                            <label class="h5" for="phoneNumber">Phone Number</label>
                             <input type="text" name="phoneNumber" class="form__control" id="phoneNumber"
                                 placeholder="+123 023456789">
                             <small class="text-error"></small>
                         </div>
 
                         <div class="form__group">
-                            <label for="email">Email Address</label>
+                            <label class="h5" for="email">Email Address</label>
                             <input type="email" name="email" class="form__control" id="email"
                                 placeholder="johndoe@gmail.com">
                             <small class="text-error"></small>
                         </div>
 
                         <div class="form__group">
-                            <label for="message">Message</label>
+                            <label class="h5" for="message">Message</label>
                             <textarea class="form__control form__control--textarea" name="message" id="message"
                                 cols="30" rows="10" placeholder=" How can I help?"></textarea>
                             <small class="text-error"></small>
                         </div>
                         <div class="form__checkbox">
-                            <label for="subscribe" class="checkbox">
+                            <label for="subscribe" class="checkbox h5">
                                 Subscribe to our blogs?
                                 <input type="checkbox" id="subscribe" name="subscribe" value="true">
                                 <span class="checkmark"></span>
@@ -655,12 +655,43 @@
                     </form>
                 </div>
                 <div class="col-5-md col-12-xs">
-                    <h3>Office Location</h3>
-                    <p>
-                        <img loading="lazy" src="/assets/images/projects/icons8_marker_100px 1.png">
-                        5th Floor Mozun
-                        Building, Rocky Road, Gotham - Wakanda
-                    </p>
+                    <div class="contact__info">
+                        <h3 class="h3">Get In Touch</h3>
+                        <div class="contact__numbers display-f gap-2 mt-2 ">
+                            <div class="h4 text-primary"><i class="fa-solid fa-phone"></i></div>
+                            <div class="h5">
+                                <p>+123 234 56789</p>
+                                <p>+123 789 65432</p>
+                            </div>
+                        </div>
+                        <div class="contact__email display-f gap-2 mt-1">
+                            <div class="h4 text-primary"><i class="fa-solid fa-envelope"></i></div>
+                            <p class="h5">info@weconstruct.com</p>
+                        </div>
+                    </div>
+                    <div class="contact__hours mt-3 mb-3">
+                        <h3 class="h3">Business Hours</h3>
+
+                        <div class="display-f gap-2 mt-2">
+                            <div class="h4 text-primary"><i class="fa-solid fa-headset"></i></div>
+                            <p class="h5">Our Call center is always available 24 hours a day, 7 days a week</p>
+                        </div>
+                        <div class="display-f gap-2 mt-1">
+                            <div class="h4 text-primary"><i class="fa-solid fa-clock"></i></div>
+                            <div class="h5">
+                                <p>Monday-Friday: <span class="ml-1">9am- 5pm</span></p>
+                                <p>Saturday: <span class="ml-1">9am - 2pm</span></p>
+                                <p>Sunday:<span class="ml-1">Closed</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="h3">Office Location</h3>
+                    <div class="display-f gap-2 mt-1 mb-1">
+                        <div class="h4 text-primary"><i class="fa-solid fa-location-dot "></i></div>
+                        <p class="h5 mb-1">
+                            5th Floor Mozun Building, Rocky Road, Gotham - Wakanda
+                        </p>
+                    </div>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4911588753216!2d3.334067814266794!3d6.585703724265425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b91f4561a4f95%3A0x35b4d251e9caeb49!2sTijani%20Ahmed%20Way%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sar!4v1593524047503!5m2!1sen!2sar"
                         width="inherit" height="450" frameborder="1" allowfullscreen="" aria-hidden="false" tabindex="0"
