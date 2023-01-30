@@ -1,0 +1,59 @@
+@use 'abstract' as *;
+
+.footer {
+    border-top: rem(3) solid $primary;
+
+    .footer__about {
+        text-align: center;
+
+        @include breakpoints-up("md") {
+            text-align: left;
+        }
+
+        .footer__brand {
+            @include breakpoints-up("xs") {
+                justify-content: center;
+            }
+
+            @include breakpoints-up("md") {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .footer__brand-image {
+        height: rem(30);
+    }
+
+    .social-media__links {
+        @include breakpoints-up("xs") {
+            justify-content: space-evenly;
+        }
+
+        @include breakpoints-up("md") {
+            justify-content: center;
+        }
+
+        @include breakpoints-up("lg") {
+            justify-content: space-between;
+        }
+
+        .social-media__link {
+            background-color: $primary;
+            background-image: linear-gradient(-45deg, $primary, $secondary);
+            border-radius: rem(5);
+            color: $white;
+            font-size: rem(25);
+            padding: rem(10) rem(15);
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                background-image: linear-gradient(-45deg, $secondary, $primary);
+                transform: scale(1.05);
+            }
+        }
+
+    }
+
+
+}
