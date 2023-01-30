@@ -48,7 +48,9 @@
 // sections
 
 .section {
-    padding: rem(60) 0;
+    padding: rem(48) 0;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 // border line in sections

@@ -106,16 +106,16 @@
                 width: 100%;
                 height: rem(3);
                 background-color: $primary;
-                top: rem(25);
+                top: rem(24);
                 opacity: 0;
                 transition: all .2s ease-in-out;
 
                 @include breakpoints-up("md") {
-                    top: rem(36);
+                    top: rem(35);
                 }
 
                 @include breakpoints-up("lg") {
-                    top: rem(39);
+                    top: rem(38);
                 }
             }
         }
