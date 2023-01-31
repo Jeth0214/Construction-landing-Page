@@ -15,7 +15,6 @@
         position: relative;
         overflow: hidden;
         border-radius: rem(5);
-        min-width: rem(300);
         min-height: rem(300);
         background-color: $dark-gray;
         background-repeat: no-repeat;
@@ -27,7 +26,6 @@
         &:nth-child(1) {
             grid-area: project1;
             background-image: url(../assets/images/projects/project1.jpg);
-            //background-position: center bottom;
         }
 
         &:nth-child(2) {
