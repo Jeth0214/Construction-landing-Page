@@ -35,7 +35,7 @@
         }
 
         @include breakpoints-up("lg") {
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
 
         .social-media__link {
