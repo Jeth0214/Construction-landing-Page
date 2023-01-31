@@ -26,28 +26,28 @@
 
         &:nth-child(1) {
             grid-area: project1;
-            background-image: url('/assets/images/projects/project1.jpg');
+            background-image: url('../assets/images/projects/project1.jpg');
             //background-position: center bottom;
         }
 
         &:nth-child(2) {
             grid-area: project2;
-            background-image: url('/assets/images/projects/project2.jpg');
+            background-image: url('../assets/images/projects/project2.jpg');
         }
 
         &:nth-child(3) {
             grid-area: project3;
-            background-image: url('/assets/images/projects/project3.jpg');
+            background-image: url('../assets/images/projects/project3.jpg');
         }
 
         &:nth-child(4) {
             grid-area: project4;
-            background-image: url('/assets/images/projects/project4.jpg');
+            background-image: url('../assets/images/projects/project4.jpg');
         }
 
         &:nth-child(5) {
             grid-area: project5;
-            background-image: url('/assets/images/projects/project5.jpg');
+            background-image: url('../assets/images/projects/project5.jpg');
         }
 
         &::after {
