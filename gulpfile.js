@@ -6,12 +6,14 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+const purgecss = require('gulp-purgecss');
 
 //Sass tasks
 function scssTask() {
     return src('app/scss/style.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(purgecss({ content: ['index.html'] }))
         .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
@@ -50,7 +52,7 @@ function browserSyncReload(cb) {
 function watchTask() {
     watch('*.html', browserSyncReload);
     watch(
-        ['app/scss/**/*', 'app/**/*.js'],
+        ['app/scss/**/*', '*.html', 'app/**/*.js'],
         series(scssTask, jsTask, browserSyncReload)
     );
 }

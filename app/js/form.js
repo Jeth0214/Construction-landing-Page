@@ -56,11 +56,12 @@ const validate = (formControl) => {
 
     // validate email address
     if (formControl.id === "email" && formControlValue) {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formControlValue)) {
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formControlValue)) {
             formControl.classList.remove("form__error");
             formControl.nextElementSibling.innerHTML = "";
             errorMessage += formControl.nextElementSibling.innerHTML
         } else {
+            alert("Not a valid form control");
             formControl.classList.add("form__error");
             formControl.nextElementSibling.innerHTML = "Please use a valid email address";
             errorMessage += formControl.nextElementSibling.innerHTML

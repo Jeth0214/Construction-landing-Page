@@ -88,13 +88,13 @@
             'project1 project1'
             'project2 project5'
             'project3 project5'
-            'project4 project5';
+            'project4 project4';
     }
 
     @include breakpoints-up("lg") {
         grid-template-areas:
-            'project1 project1 project2 project5'
-            'project3 project4 project4 project5';
+            'project1 project1 project1 project2 project2 project5 project5'
+            'project3 project3 project4 project4 project4 project5 project5';
     }
 
 
