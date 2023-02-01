@@ -1,9 +1,12 @@
 @use 'abstract' as *;
 
 .hero {
-    min-height: rem(668);
+    //min-height: rem(668);
+    min-height: 100vh;
+    min-height: 100dvh;
+    //height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: #2c2c2c;
     align-items: center;
     background-image: url('../assets/images/home/hero.png');
@@ -14,6 +17,12 @@
     @include breakpoints-up("md") {
         background-color: #646464;
         background-position: bottom right 40%;
+
+    }
+
+    @include breakpoints-up("lg") {
+        background-color: #646464;
+        background-position: bottom right 55%;
 
     }
 

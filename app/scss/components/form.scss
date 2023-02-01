@@ -105,5 +105,12 @@
         }
     }
 
+    .form__submit-btn {
+        display: inline-block;
+        width: 100%;
 
+        @include breakpoints-up("sm") {
+            width: unset;
+        }
+    }
 }

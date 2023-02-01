@@ -1,6 +1,14 @@
 @use 'abstract' as *;
 
 .contact-us {
+    .contact__info {
+        margin-top: rem(40);
+
+        @include breakpoints-up("md") {
+            margin-top: unset;
+        }
+    }
+
     .contact__location {
         border: 1px solid $primary;
         width: 100%;

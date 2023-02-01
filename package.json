@@ -16,8 +16,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "postcss": "^8.4.21",
-    "sass": "^1.57.1",
-    "gulp-purgecss": "^5.0.0"
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "gulp-purgecss": "^5.0.0"
