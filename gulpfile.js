@@ -6,13 +6,11 @@ const cssnano = require('cssnano');
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
-const purgecss = require('gulp-purgecss')
 
 //Sass tasks
 function scssTask() {
     return src('app/scss/style.scss', { sourcemaps: true })
         .pipe(sass())
-        .pipe(purgecss({ content: ['*.html'] }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest('dist', { sourcemaps: '.' }));
 }

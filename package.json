@@ -7,7 +7,7 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.29.1",
     "cssnano": "^5.1.14",
     "dart-sass": "^1.25.0",
     "gulp": "^4.0.2",
@@ -18,9 +18,7 @@
     "postcss": "^8.4.21",
     "sass": "^1.57.1"
   },
-  "devDependencies": {
-    "gulp-purgecss": "^5.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
