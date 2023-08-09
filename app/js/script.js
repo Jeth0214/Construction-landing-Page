@@ -68,38 +68,6 @@ function toggleMenu() {
 
 }
 
-/*
-    this function will set the nav link to active when scrolling 
-    to its section
-*/
-
-// function navHighlighter() {
-//     // get the current scroll position
-//     let scrollY = window.pageYOffset;
-//     let sectionId = "";
-
-//     // Now, loop through sections to get  top and ID values for each section
-//     sections.forEach(section => {
-//         let sectionTop = section.offsetTop - 60;
-//         if (scrollY >= sectionTop) {
-//             sectionId = section.getAttribute("id");
-//         }
-//     })
-
-//     /**
-//      * check if nav link contains the section id
-//      * and set the active class to it
-//     */
-//     navLink.forEach(link => {
-//         let linkHref = link.href;
-//         if (linkHref.includes(sectionId)) {
-//             link.classList.add("nav__link--active");
-//         }
-//         else {
-//             link.classList.remove("nav__link--active");
-//         }
-//     })
-// }
 
 
 // When the user clicks on the button, scroll to the top of the document
